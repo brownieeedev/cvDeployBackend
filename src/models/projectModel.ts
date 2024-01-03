@@ -5,7 +5,7 @@ type Technologies = {
   tooltip: string;
 };
 
-type ProjectData = {
+export type ProjectData = {
   title: string;
   projectImages: string[];
   backendTechnologies: Technologies[];
