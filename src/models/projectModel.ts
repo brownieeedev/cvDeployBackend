@@ -8,7 +8,8 @@ type Technologies = {
 type ProjectData = {
   title: string;
   projectImages: string[];
-  technologies: Technologies[];
+  backendTechnologies: Technologies[];
+  frontendTechnologies: Technologies[];
   description: string;
   challenges: string;
   githubLink?: string;
@@ -19,7 +20,8 @@ type ProjectData = {
 const projectSchema = new Schema<ProjectData>({
   title: { type: String, required: true, unique: true },
   projectImages: { type: [String], minlength: 3, required: true },
-  technologies: { type: [Object], minlength: 1, required: true },
+  backendTechnologies: { type: [Object], minlength: 1, required: true },
+  frontendTechnologies: { type: [Object], minlength: 1, required: true },
   description: { type: String, required: true },
   challenges: { type: String, required: true },
   githubLink: { type: String },
