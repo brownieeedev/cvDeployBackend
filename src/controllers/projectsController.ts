@@ -4,7 +4,7 @@ import { Project } from "../models/projectModel";
 
 export const getAllProjects = async (req: Req, res: Res) => {
   //getting all projects with Model
-  const projects = await Project.find();
+  const projects = await Project.find({ visible: true });
 
   if (!projects)
     return res.status(404).json({

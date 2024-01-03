@@ -15,6 +15,7 @@ type ProjectData = {
   githubLink?: string;
   imgSliderWidth?: string;
   status?: "deployed" | "inprogress" | "finished";
+  visible?: boolean;
 };
 
 const projectSchema = new Schema<ProjectData>({
@@ -27,6 +28,7 @@ const projectSchema = new Schema<ProjectData>({
   githubLink: { type: String },
   imgSliderWidth: { type: String },
   status: { type: String },
+  visible: { type: Boolean, required: true, default: false },
 });
 
 export const Project = model<ProjectData>("Project", projectSchema, "Project");
