@@ -10,6 +10,7 @@ export type ProjectData = {
   projectImages: string[];
   backendTechnologies: Technologies[];
   frontendTechnologies: Technologies[];
+  databaseTechnologies: Technologies[];
   description: string;
   challenges: string;
   githubLink?: string;
@@ -23,6 +24,7 @@ const projectSchema = new Schema<ProjectData>({
   projectImages: { type: [String], minlength: 3, required: true },
   backendTechnologies: { type: [Object], minlength: 1, required: true },
   frontendTechnologies: { type: [Object], minlength: 1, required: true },
+  databaseTechnologies: { type: [Object], minlength: 1, required: true },
   description: { type: String, required: true },
   challenges: { type: String, required: true },
   githubLink: { type: String },
